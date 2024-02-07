@@ -1,0 +1,67 @@
+.fan {
+  background: url("https://cdn-icons-png.flaticon.com/512/4551/4551810.png")
+    center/100%;
+  width: 50%;
+  height: 50%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 20px 3px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 6px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fan.active1 {
+  animation: spin 0.7s infinite linear;
+}
+.fan.active2 {
+  animation: spin 0.5s infinite linear;
+}
+.fan.active3 {
+  animation: spin 0.3s infinite linear;
+}
+.fan.activeoff {
+  animation: 0;
+}
+.fan.activeon {
+  animation: spin 1s infinite linear;
+}
+.on.active {
+  background-color: green;
+  color: white;
+}
+.off.active {
+  background-color: red;
+  color: white;
+}
